@@ -16,19 +16,20 @@
 
 /* === Logo === */
 .leftSide img {
-  height: 50px;
+  height: 60px;
 }
 
 /* === Hamburger Icon === */
 .toggleButton {
   display: none;
+
   cursor: pointer;
   padding-right: 10px; /* <--- This adds spacing from the right edge */
 }
 
 .hamburgerIcon {
   color: white;
-  font-size: 36px;
+  font-size: 40px;
 }
 
 /* === Desktop Links === */
@@ -45,7 +46,7 @@
 }
 
 .rightSide a:hover {
-  color: #ffce00;
+  color: #ff9500;
 }
 
 /* === Mobile Dropdown === */
@@ -62,8 +63,9 @@
     left: 0;
     width: 100%;
     background-color: #121619;
-    padding: 10px 0;
+    padding: 10px 10;
     text-align: center;
+    gap: 30px;
   }
 
   .rightSide.active {
@@ -72,6 +74,8 @@
 
   .rightSide a {
     padding: 12px 0;
+    width: 100%;
+    text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
