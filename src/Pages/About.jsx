@@ -22,9 +22,6 @@ function About() {
           voluptatibus voluptate possimus velit quam sed esse eius, quasi neque
           animi corrupti fuga magnam. Minus, pariatur repellendus in, aliquam
           voluptates iste ipsam delectus fugit est expedita illum quis vitae
-          animi praesentium? Voluptate, neque, hic at commodi consequuntur
-          laboriosam, dignissimos labore saepe repellat reprehenderit aperiam
-          dolore animi nemo ea voluptas ducimus maxime delectus!
         </p>
       </div>
     </div>
