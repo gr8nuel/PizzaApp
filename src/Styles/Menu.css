@@ -12,11 +12,15 @@
 }
 
 .menuList {
-  width: 70vw;
-  height: auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
 }
 
 /* MENU ITEM STYLING */
