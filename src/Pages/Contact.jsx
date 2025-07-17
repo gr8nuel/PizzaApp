@@ -4,11 +4,7 @@ import "../Styles/Contact.css";
 function Contact() {
   return (
     <div className="contact">
-      <div
-        className="leftSide"
-        style={{ backgroundImage: `url(/pizzaLeft.jpg)` }}
-      ></div>
-
+      <div className="leftSide"></div>
       <div className="rightSide">
         <h1>Contact Us</h1>
         <form id="contact-form" method="POST">
@@ -22,9 +18,7 @@ function Contact() {
           <label htmlFor="email">Email</label>
           <input type="email" name="email" placeholder="Enter email" required />
           <label htmlFor="message">Message</label>
-          <textarea name="mesaage" rows="6" required>
-            Enter message...
-          </textarea>
+          <textarea name="mesaage">Enter message...</textarea>
           <button type="submit">Send Message</button>
         </form>
       </div>

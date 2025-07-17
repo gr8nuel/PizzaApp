@@ -1,32 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/navbar.css";
 import ReorderIcon from "@mui/icons-material/Reorder";
-import { useState } from "react";
 
 function Navbar() {
-  const [openLinks, setOpenLiinks] = useState(false);
+  const [openLinks, setOpenLinks] = useState(false);
+
+  const toggleNavbar = () => {
+    setOpenLinks(!openLinks);
+  };
 
   return (
     <div className="navbar">
-      <div className="leftSide" id={openLinks ? "open" : "close"}>
-        <img src="/pizzaLogo.png" alt="logo" />
-        <div className="hiddenLinks">
-          <Link to="/">Home</Link>
-          <Link to="/menu">Menu</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
+      <div className="leftSide">
+        <img src="/pizzaLogo.png" alt="Logo" />
       </div>
-      <div className="rightSide">
-        <Link to="/">Home</Link>
-        <Link to="/menu">Menu</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-        <button onClick={() => setOpenLiinks(!openLinks)}>
-          {" "}
-          <ReorderIcon />
-        </button>
+
+      <div className="toggleButton" onClick={toggleNavbar}>
+        <ReorderIcon className="hamburgerIcon" />
+      </div>
+
+      <div className={`rightSide ${openLinks ? "active" : ""}`}>
+        <Link to="/" onClick={() => setOpenLinks(false)}>
+          Home
+        </Link>
+        <Link to="/menu" onClick={() => setOpenLinks(false)}>
+          Menu
+        </Link>
+        <Link to="/about" onClick={() => setOpenLinks(false)}>
+          About
+        </Link>
+        <Link to="/contact" onClick={() => setOpenLinks(false)}>
+          Contact
+        </Link>
       </div>
     </div>
   );

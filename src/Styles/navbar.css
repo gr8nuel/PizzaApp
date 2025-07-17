@@ -1,102 +1,77 @@
+/* === Navbar Container === */
 .navbar {
   width: 100%;
-  height: 100px;
   background-color: #121619;
   display: flex;
-  flex-direction: row;
-}
-
-.navbar .leftSide {
-  flex: 50%;
-  height: 100%;
-  display: flex;
   align-items: center;
-  padding-left: 150px;
+  justify-content: space-around;
+  gap: 220px;
+  padding: 0 20px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-.navbar .leftSide img {
-  width: 70px;
+/* === Logo === */
+.leftSide img {
+  height: 50px;
 }
 
-.navbar .rightSide {
-  flex: 50%;
-  height: 100%;
+/* === Hamburger Icon === */
+.toggleButton {
+  display: none;
+  cursor: pointer;
+  padding-right: 10px; /* <--- This adds spacing from the right edge */
+}
+
+.hamburgerIcon {
+  color: white;
+  font-size: 36px;
+}
+
+/* === Desktop Links === */
+.rightSide {
+  max-width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 50px;
 }
 
-.navbar a {
+.rightSide a {
   color: white;
   text-decoration: none;
-  margin: 20px;
+  font-size: 18px;
 }
 
-.navbar .rightSide button {
-  background-color: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
+.rightSide a:hover {
+  color: #ffce00;
 }
 
-.navbar .rightSide svg {
-  font-size: 40px;
-}
-
-.navbar #open {
-  padding-left: 0px;
-}
-.navbar #open img {
-  display: none;
-}
-
-.navbar #close img {
-  display: inherit;
-}
-
-.navbar #open .hiddenLinks {
-  display: inherit;
-  margin-left: 30px;
-}
-
-.navbar #close .hiddenLinks {
-  display: none;
-}
-
-.navbar #open a {
-  width: 70px;
-  margin: 5px;
-}
-@media only screen and (max-width: 900px) {
-  .navbar .rightSide a {
-    width: 70px;
+/* === Mobile Dropdown === */
+@media screen and (max-width: 900px) {
+  .toggleButton {
+    display: block;
   }
-  .navbar .leftSide {
-    padding-left: 50px;
-  }
-}
 
-@media only screen and (max-width: 600px) {
-  .navbar .rightSide a {
+  .rightSide {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #121619;
+    padding: 10px 0;
+    text-align: center;
   }
 
-  .navbar .rightSide {
-    justify-content: flex-end;
-    padding-right: 50px;
+  .rightSide.active {
+    display: flex;
   }
 
-  .navbar .rightSide button {
-    display: inherit;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .navbar .rightSide button {
-    display: none;
-  }
-
-  .hiddenLinks {
-    display: none;
+  .rightSide a {
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
