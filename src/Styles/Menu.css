@@ -12,15 +12,11 @@
 }
 
 .menuList {
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-
+  width: 70vw;
+  height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
 }
 
 /* MENU ITEM STYLING */
@@ -52,6 +48,7 @@
 .menuItem p {
   margin-left: 20px;
 }
+
 button {
   margin-left: 20px;
   background-color: #120606df;
@@ -65,7 +62,6 @@ button:hover {
   transition: 0.3s ease-in;
   cursor: pointer;
 }
-
 @media only screen and (max-width: 1300px) {
   .menuList {
     grid-template-columns: 1fr 1fr;
